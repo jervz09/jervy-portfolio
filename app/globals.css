@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+:root{--bg:#f7f7f5;--surface:#ffffff;--elevated:#f0f1f2;--fg:#17181b;--muted:#656b76;--line:#e2e3e5;--strong:#c7c9ce;--accent:#5369c8;color-scheme:light}
+.dark{--bg:#111317;--surface:#17191e;--elevated:#1d2026;--fg:#f0f1f3;--muted:#969ca8;--line:#292d35;--strong:#3b414d;--accent:#8395ef;color-scheme:dark}
+@theme inline{--color-bg:var(--bg);--color-surface:var(--surface);--color-elevated:var(--elevated);--color-fg:var(--fg);--color-muted:var(--muted);--color-line:var(--line);--color-strong:var(--strong);--color-accent:var(--accent);--font-sans:var(--font-geist-sans);--font-mono:var(--font-geist-mono)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:5rem}body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-geist-sans),sans-serif;text-rendering:optimizeLegibility}::selection{background:color-mix(in srgb,var(--accent) 24%,transparent)}
+.shell{width:min(100% - 2rem,1280px);margin-inline:auto}.section{padding-block:clamp(5rem,9vw,8rem)}.link-underline{background:linear-gradient(var(--accent),var(--accent)) 0 100%/0 1px no-repeat;transition:background-size .25s}.link-underline:hover{background-size:100% 1px}.field{display:block;width:100%;border:1px solid var(--line);border-radius:.75rem;background:var(--bg);padding:.8rem .9rem;color:var(--fg);font:inherit;font-size:.875rem;outline:none;transition:border-color .2s,box-shadow .2s}.field:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 14%,transparent)}.field::placeholder{color:var(--muted)}
+.availability-dot{box-shadow:0 0 0 4px rgba(16,185,129,.18)}
+@keyframes progress{0%,15%{transform:scaleX(0)}55%,85%{transform:scaleX(1)}100%{transform:scaleX(0);transform-origin:right}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+@media(min-width:640px){.shell{width:min(100% - 3rem,1280px)}}
