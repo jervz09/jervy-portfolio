@@ -7,4 +7,4 @@ npm install
 npm run dev
 ```
 
-Personal content is centralized in `data/`. Set `NEXT_PUBLIC_SITE_URL` before deployment. The contact form intentionally runs in demo mode until an email provider is connected. The downloadable PDF resume is stored at `public/Resume - Jervy Ariola.pdf`.
+Personal content is centralized in `data/`. SEO defaults to `https://jervz-lab.vercel.app`; set `NEXT_PUBLIC_SITE_URL` to override the canonical site URL before deployment. The contact form opens a prefilled email draft for the visitor to review and send; it does not submit mail to a backend. The downloadable PDF resume is stored at `public/Resume - Jervy Ariola.pdf`.

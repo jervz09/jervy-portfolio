@@ -1,3 +1,9 @@
 import type { MetadataRoute } from "next";
-import { projects } from "@/data/projects";
-export default function sitemap():MetadataRoute.Sitemap{const base=process.env.NEXT_PUBLIC_SITE_URL||"https://jervy-portfolio.vercel.app";return [{url:base,lastModified:new Date(),changeFrequency:"monthly",priority:1},...projects.map(p=>({url:`${base}/projects/${p.slug}`,lastModified:new Date(),changeFrequency:"monthly" as const,priority:.7}))]}
+import { featuredProjects } from "@/data/projects";
+import { siteUrl } from "@/data/seo";
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    { url: siteUrl, changeFrequency: "monthly", priority: 1 },
+    ...featuredProjects.map(project => ({ url: `${siteUrl}/projects/${project.slug}`, changeFrequency: "monthly" as const, priority: 0.7 })),
+  ];
+}
