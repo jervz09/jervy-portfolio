@@ -62,7 +62,7 @@ export const projects: Project[] = [
       overview: "Jervz Lab is my portfolio for presenting professional application development, backend, and cloud/DevOps work alongside personal projects.",
       problem: "Recruiters need to understand my role, technical strengths, and project responsibilities quickly, while being able to explore individual projects and download a resume.",
       role: "I built and maintain the portfolio’s interface, reusable sections, typed content data, project routes, theme system, and search metadata.",
-      technicalWork: "Use the Next.js App Router and TypeScript data models to generate project pages from centralized content. React components share Tailwind styling, while Framer Motion provides transitions with reduced-motion support. The site includes a PDF download route and an email-draft contact form.",
+      technicalWork: "Use the Next.js App Router and TypeScript data models to generate project pages from centralized content. React components share Tailwind styling, while Framer Motion provides transitions with reduced-motion support. The site includes a PDF download route and a contact form backed by a Gmail SMTP endpoint.",
       engineeringContext: "Content and presentation are kept separate so career and project details can change without rebuilding the interface. Semantic sections, responsive layouts, light/dark themes, and reduced-motion support make the content usable across different devices and preferences.",
       deployment: "Hosted on Vercel, with page-specific metadata, canonical URLs, Person structured data, a sitemap, and robots configuration. The source is available on GitHub.",
     },
