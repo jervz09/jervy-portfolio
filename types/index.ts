@@ -1,5 +1,11 @@
 export type SocialLink = { label: string; href: string };
-export type Experience = { role: string; company?: string; period: string; summary: string; achievements: string[] };
+export type Experience = {
+  role: string;
+  company?: string;
+  period: string;
+  summary: string;
+  achievements: string[];
+};
 export type Project = {
   slug: string;
   name: string;
@@ -22,4 +28,12 @@ export type Project = {
   };
 };
 export type SkillGroup = { category: string; items: string[] };
-export type Certification = { name: string; issuer: string; status: "upcoming" | "earned"; issueDate?: string; credentialId?: string; credentialUrl?: string; badgeImage?: string };
+export type Certification = {
+  name: string;
+  issuer: string;
+  status: "upcoming" | "earned";
+  issueDate?: string;
+  credentialId?: string;
+  credentialUrl?: string;
+  badgeImage?: string;
+};

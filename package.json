@@ -7,6 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
     "typecheck": "tsc --noEmit",
     "test:contact": "node --test tests/contact.test.mjs",
     "check:contact": "node --env-file-if-exists=.env.local scripts/check-contact.mjs"
@@ -32,6 +35,7 @@
     "@types/react-dom": "^19.0.0",
     "eslint": "^9.0.0",
     "eslint-config-next": "^16.0.0",
+    "prettier": "^3.9.9",
     "tailwindcss": "^4.1.0",
     "typescript": "^5.7.0"
   }

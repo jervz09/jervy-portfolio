@@ -4,7 +4,13 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   turbopack: { root: process.cwd() },
   images: {
-    remotePatterns: [{ protocol: "https", hostname: "raw.githubusercontent.com", pathname: "/jervz09/jervy-portfolio/**" }],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        pathname: "/jervz09/jervy-portfolio/**",
+      },
+    ],
   },
 };
 export default nextConfig;

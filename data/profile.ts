@@ -5,7 +5,8 @@ export const profile = {
   initials: "JA",
   title: "Full Stack Developer | Backend & Cloud/DevOps Engineer",
   headline: "Full Stack Developer for production systems.",
-  introduction: "5+ years of software development experience, with a strong backend and cloud/DevOps focus. I build and maintain production web applications, REST APIs, and business systems—from React interfaces and backend services to AWS, Google Cloud, and CI/CD.",
+  introduction:
+    "5+ years of software development experience, with a strong backend and cloud/DevOps focus. I build and maintain production web applications, REST APIs, and business systems—from React interfaces and backend services to AWS, Google Cloud, and CI/CD.",
   about: [
     "I build and maintain the applications that businesses use every day. My 5+ years in software development span frontend interfaces, backend services, REST APIs, databases, and system integrations, including work on existing and legacy applications.",
     "My background includes Python and ERPNext/Frappe business workflow customization, followed by backend and full stack work at PawnHero using Elixir/Phoenix, Node.js, React, and MySQL. I work on customer-facing applications and internal systems, including maintenance and production troubleshooting.",
@@ -19,11 +20,17 @@ export const profile = {
   resumeFileName: "Resume - Jervy Ariola.pdf",
   availability: "Open to engineering opportunities",
   contactHeadline: "Let’s talk about your engineering team.",
-  contactDescription: "Open to Full Stack Developer, Backend Engineer, and Software Engineer roles, including ERPNext/Frappe development. I’m also interested in Cloud Engineer and DevOps Engineer opportunities that build on my production infrastructure experience.",
+  contactDescription:
+    "Open to Full Stack Developer, Backend Engineer, and Software Engineer roles, including ERPNext/Frappe development. I’m also interested in Cloud Engineer and DevOps Engineer opportunities that build on my production infrastructure experience.",
   strengths: [
-    "Full Stack Web Development", "Backend & REST APIs", "AWS & Google Cloud",
-    "CI/CD & Deployment", "Databases & Integrations", "ERPNext / Frappe",
-    "Legacy System Maintenance", "Production Troubleshooting",
+    "Full Stack Web Development",
+    "Backend & REST APIs",
+    "AWS & Google Cloud",
+    "CI/CD & Deployment",
+    "Databases & Integrations",
+    "ERPNext / Frappe",
+    "Legacy System Maintenance",
+    "Production Troubleshooting",
   ],
   socials: [
     { label: "GitHub", href: "https://github.com/jervz09" },
@@ -34,9 +41,24 @@ export const profile = {
 };
 
 export const principles = [
-  ["Understand the workflow", "Start with how people use the system and the business process it supports."],
-  ["Maintain what matters", "Improve existing applications with care for compatibility and day-to-day operations."],
-  ["Connect the systems", "Treat APIs, data handling, and integrations as part of the complete user workflow."],
-  ["Plan for deployment", "Consider environments, infrastructure, and production support alongside application code."],
-  ["Automate repeatable work", "Use version control and CI/CD to make delivery easier to maintain."],
+  [
+    "Understand the workflow",
+    "Start with how people use the system and the business process it supports.",
+  ],
+  [
+    "Maintain what matters",
+    "Improve existing applications with care for compatibility and day-to-day operations.",
+  ],
+  [
+    "Connect the systems",
+    "Treat APIs, data handling, and integrations as part of the complete user workflow.",
+  ],
+  [
+    "Plan for deployment",
+    "Consider environments, infrastructure, and production support alongside application code.",
+  ],
+  [
+    "Automate repeatable work",
+    "Use version control and CI/CD to make delivery easier to maintain.",
+  ],
 ] as const;

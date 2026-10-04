@@ -9,7 +9,6 @@ npm run dev
 
 Personal content is centralized in `data/`. SEO defaults to `https://jervz-lab.vercel.app`; set `NEXT_PUBLIC_SITE_URL` to override the canonical site URL before deployment. The contact form submits to `/api/contact`, which sends through Gmail SMTP after the server-only credentials below are configured. The downloadable PDF resume is stored at `public/Resume - Jervy Ariola.pdf`.
 
-
 ## Contact form: Gmail SMTP
 
 The form sends a plain-text notification to the address in `data/profile.ts` (currently `jervyariola@gmail.com`). The Gmail account is the sender; the visitor’s address is Reply-To. Visitors cannot choose recipients, and no automatic reply is sent to them.
@@ -19,9 +18,9 @@ The form sends a plain-text notification to the address in `data/profile.ts` (cu
 1. Enable Google 2-Step Verification, then create a Google Account app password: https://support.google.com/accounts/answer/185833. Use an app password, not your normal Google password.
 2. Open the portfolio project in Vercel → Settings → Environment Variables. Add:
 
-   | Name | Value |
-   | --- | --- |
-   | `GMAIL_USER` | `jervyariola@gmail.com` |
+   | Name                 | Value                                               |
+   | -------------------- | --------------------------------------------------- |
+   | `GMAIL_USER`         | `jervyariola@gmail.com`                             |
    | `GMAIL_APP_PASSWORD` | Your Gmail app password, saved as a sensitive value |
 
 3. Enable them for Production. Add Preview/Development only if those environments should also send real mail. Never use a `NEXT_PUBLIC_` prefix for credentials.
