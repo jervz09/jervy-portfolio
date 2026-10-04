@@ -37,6 +37,8 @@ export const projects: Project[] = [
   {
     slug: "maildesk", name: "MailDesk",
     description: "An email service application with separate company workspaces, contact management, and HTML campaigns. I built the web interface, REST API, provider integrations, and persistent campaign queue, with deployment support for Vercel and Supabase.",
+    image: "/images/projects/maildesk-app-login.png",
+    imageFit: "contain",
     features: ["Company Workspaces", "SES / Gmail / SMTP", "HTML Campaigns", "Contact Imports", "Campaign Queue", "Unsubscribe Management", "Integration API"],
     technologies: ["JavaScript", "Node.js", "Express", "PostgreSQL", "SQLite", "AWS SES", "SMTP", "Supabase", "Vercel"],
     focus: ["Backend & REST APIs", "Email provider integrations", "Persistent queues", "Serverless deployment"],

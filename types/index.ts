@@ -5,6 +5,7 @@ export type Project = {
   name: string;
   description: string;
   image?: string;
+  imageFit?: "cover" | "contain";
   featured?: boolean;
   features: string[];
   technologies: string[];
