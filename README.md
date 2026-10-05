@@ -37,3 +37,15 @@ Use Node.js 24 or newer for the included verification scripts. Copy `.env.exampl
 Implementation: Node.js route handler → Nodemailer → `smtp.gmail.com:465` over verified TLS. The handler bounds request size, validates input, checks request origin, rejects a honeypot field, and limits attempts. SMTP credentials and message content are not logged or exposed to the browser. Errors retain form input; uncertain submissions are not automatically retried.
 
 Throttling is best-effort in memory (five attempts per 15 minutes per Vercel-provided client IP, or a shared bucket on other hosts). It resets on cold starts and is not a distributed quota. For stronger abuse controls, configure a platform rate-limit rule on `/api/contact` or add a shared limiter. Gmail account limits and authentication policies still apply.
+
+## Certificates and learning goals
+
+Edit `data/certifications.ts` to manage the section. Cards, counts, links, and groups render from this list; completed credentials are sorted by issue date, newest first. No component edits are needed for new entries. Files placed in `public/certificate/` are public assets; adding a file alone does not create a card.
+
+1. Save the original certificate PDF with a URL-safe filename (for example, `public/certificate/AWS/course-name.pdf`). An optional first-page PNG preview can sit beside it.
+2. Add an entry with a unique `id`, the exact certificate `name`, `issuer`, and `kind`: `course` for course completion or `certification` for a professional credential. A course named "Solutions Architect" is still a course completion unless the credential itself establishes a professional certification.
+3. Set `status` to `earned` only after completion. Add the documented `issueDate` in `YYYY-MM-DD` format and `certificateUrl` starting with `/certificate/` (omit `public`). Add `previewImage`, `credentialId`, and the issuer's `credentialUrl` only when available.
+4. Use `pursuing` for an active learning goal or `planned` for a future goal. These appear separately without certificate or verification links. When earned, update the same entry with its exact credential title, date, and evidence.
+5. Run `npm run typecheck`, `npm run lint`, and the build before deploying. Commit the data and associated PDF/preview files together.
+
+The current Google Cloud and Azure entries intentionally have general names until a specific course or exam is confirmed. The AWS entries are course completion certificates, not AWS Certified exam credentials.

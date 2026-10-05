@@ -29,11 +29,14 @@ export type Project = {
 };
 export type SkillGroup = { category: string; items: string[] };
 export type Certification = {
+  id: string;
   name: string;
   issuer: string;
-  status: "upcoming" | "earned";
+  kind: "course" | "certification";
+  status: "earned" | "pursuing" | "planned";
   issueDate?: string;
+  certificateUrl?: string;
+  previewImage?: string;
   credentialId?: string;
   credentialUrl?: string;
-  badgeImage?: string;
 };
