@@ -3,6 +3,36 @@ import type { Certification } from "@/types";
 // Add credentials here. Files live in public/certificate; URLs omit /public.
 export const certifications: Certification[] = [
   {
+    id: "aws-cloud-quest-cloud-practitioner",
+    name: "AWS Cloud Quest: Cloud Practitioner - Training Badge",
+    issuer: "AWS Training & Certification",
+    kind: "badge",
+    status: "earned",
+    issueDate: "2026-10-08",
+    previewImage: "/badges/aws-cloud-quest-cloud-practitioner.png",
+    credentialUrl: "https://www.credly.com/badges/72279524-561c-4553-9bad-657655d8d390/public_url",
+  },
+  {
+    id: "gemini-end-to-end-sdlc",
+    name: "Gemini for end-to-end SDLC",
+    issuer: "Google Skills",
+    kind: "badge",
+    status: "earned",
+    issueDate: "2026-10-05",
+    previewImage: "/badges/gemini-end-to-end-sdlc.png",
+    credentialUrl: "https://www.skills.google/public_profiles/1d00f5f8-eaed-4387-b303-77207dd9dcdb/badges/28663498",
+  },
+  {
+    id: "gemini-application-developers",
+    name: "Gemini for Application Developers",
+    issuer: "Google Skills",
+    kind: "badge",
+    status: "earned",
+    issueDate: "2026-10-05",
+    previewImage: "/badges/gemini-application-developers.png",
+    credentialUrl: "https://www.skills.google/public_profiles/1d00f5f8-eaed-4387-b303-77207dd9dcdb/badges/28663302",
+  },
+  {
     id: "aws-networking-concepts",
     name: "AWS SimuLearn: Networking Concepts",
     issuer: "AWS Training & Certification",

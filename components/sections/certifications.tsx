@@ -12,19 +12,45 @@ export function Certifications() {
   const earned = certifications
     .filter(c => c.status === "earned")
     .sort((a, b) => (b.issueDate ?? "").localeCompare(a.issueDate ?? ""));
+  const badges = earned.filter(c => c.kind === "badge");
+  const certificates = earned.filter(c => c.kind !== "badge");
   const learning = certifications.filter(c => c.status !== "earned");
 
   return (
     <section id="certifications" className="section shell scroll-mt-20">
       <SectionHeading
         eyebrow="05 / Continued learning"
-        title="Certificates & cloud learning."
-        description="Completed training alongside my ongoing cloud certification goals, building on hands-on application and infrastructure work."
+        title="Badges, certificates & cloud learning."
+        description="Earned badges and completed training alongside my ongoing cloud certification goals, building on hands-on application and infrastructure work."
       />
-      {earned.length > 0 && <div>
-        <h3 className="mb-5 text-sm font-medium">Completed credentials <span className="ml-2 font-mono text-xs text-muted">({earned.length})</span></h3>
+      {badges.length > 0 && <div className="mb-10">
+        <h3 className="mb-5 text-sm font-medium">Earned badges <span className="ml-2 font-mono text-xs text-muted">({badges.length})</span></h3>
         <div className="grid gap-4 md:grid-cols-3">
-          {earned.map((c, i) => (
+          {badges.map((badge, i) => (
+            <Reveal key={badge.id} delay={i * .05} className="h-full">
+              <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface">
+                {badge.previewImage && <div className="relative h-56 border-b border-line bg-white">
+                  <Image src={badge.previewImage} alt={`${badge.name} badge`} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-contain p-6" />
+                </div>}
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="flex items-center gap-3 text-accent">
+                    <Award size={18} aria-hidden="true" className="shrink-0" />
+                    <span className="text-xs font-medium">Earned badge</span>
+                  </div>
+                  <h4 className="mt-5 font-semibold leading-6">{badge.name}</h4>
+                  <p className="mt-2 text-sm text-muted">{badge.issuer}</p>
+                  {badge.issueDate && <p className="mt-3 text-xs text-muted">Issued <time dateTime={badge.issueDate}>{dateFormatter.format(new Date(`${badge.issueDate}T00:00:00Z`))}</time></p>}
+                  {badge.credentialUrl && <a href={badge.credentialUrl} target="_blank" rel="noopener noreferrer" aria-label={`Verify ${badge.name} (opens in a new tab)`} className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-medium text-accent hover:underline">Verify badge <ArrowUpRight size={14} aria-hidden="true" /></a>}
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </div>}
+      {certificates.length > 0 && <div>
+        <h3 className="mb-5 text-sm font-medium">Completed certificates <span className="ml-2 font-mono text-xs text-muted">({certificates.length})</span></h3>
+        <div className="grid gap-4 md:grid-cols-3">
+          {certificates.map((c, i) => (
             <Reveal key={c.id} delay={i * .05} className="h-full">
               <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface">
                 {c.previewImage && <div className="relative aspect-[1000/773] border-b border-line bg-white">

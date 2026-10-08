@@ -32,7 +32,7 @@ export type Certification = {
   id: string;
   name: string;
   issuer: string;
-  kind: "course" | "certification";
+  kind: "course" | "certification" | "badge";
   status: "earned" | "pursuing" | "planned";
   issueDate?: string;
   certificateUrl?: string;
