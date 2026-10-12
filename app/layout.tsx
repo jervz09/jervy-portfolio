@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { profile } from "@/data/profile";
 import { seo, siteUrl } from "@/data/seo";
@@ -73,6 +74,7 @@ export default function RootLayout({
       <body className={`${sans.variable} ${mono.variable} antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
         <Analytics />
+        <SpeedInsights />
         <Script
           id="person-schema"
           type="application/ld+json"
