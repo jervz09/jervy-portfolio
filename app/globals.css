@@ -105,6 +105,18 @@ body {
     transform-origin: right;
   }
 }
+@keyframes pipeline-stage {
+  0%, 12% { border-color: var(--line); color: var(--muted); background: var(--surface); }
+  22%, 38% { border-color: var(--accent); color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--surface)); }
+  48%, 100% { border-color: var(--line); color: var(--muted); background: var(--surface); }
+}
+@keyframes pipeline-line {
+  0%, 15% { transform: scaleX(0); }
+  45%, 70% { transform: scaleX(1); }
+  100% { transform: scaleX(0); transform-origin: right; }
+}
+.pipeline-stage { animation: pipeline-stage 3s ease-in-out infinite; }
+.pipeline-line { animation: pipeline-line 3s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

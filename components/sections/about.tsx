@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/animations/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { principles, profile } from "@/data/profile";
@@ -12,6 +13,19 @@ export function About() {
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr]">
           <Reveal>
             <div className="space-y-5">
+              <div className="mb-7 flex items-center gap-4">
+                <Image
+                  src="/images/profile-square.png"
+                  alt="Portrait of Jervy Ariola"
+                  width={72}
+                  height={72}
+                  className="size-[72px] rounded-2xl border border-line object-cover"
+                />
+                <div>
+                  <p className="font-medium">Jervy Ariola</p>
+                  <p className="mt-1 text-sm text-muted">Full Stack Developer · Backend Engineer · Cloud/DevOps</p>
+                </div>
+              </div>
               {profile.about.map((paragraph) => (
                 <p
                   key={paragraph}

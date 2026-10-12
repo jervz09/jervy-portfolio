@@ -3,10 +3,10 @@ import type { SocialLink } from "@/types";
 export const profile = {
   name: "Jervy Ariola",
   initials: "JA",
-  title: "Full Stack Developer | Backend & Cloud/DevOps Engineer",
-  headline: "Full Stack Developer for production systems.",
+  title: "Full Stack Developer · Backend Engineer · Cloud/DevOps",
+  headline: "Building Reliable Applications & Cloud Infrastructure.",
   introduction:
-    "5+ years of software development experience, with a strong backend and cloud/DevOps focus. I build and maintain production web applications, REST APIs, and business systems—from React interfaces and backend services to AWS, Google Cloud, and CI/CD.",
+    "Full Stack Developer with 5+ years of experience building production web applications, REST APIs, and cloud infrastructure. Specialized in backend engineering, AWS, CI/CD automation, containerization, and application delivery.",
   about: [
     "I build and maintain the applications that businesses use every day. My 5+ years in software development span frontend interfaces, backend services, REST APIs, databases, and system integrations, including work on existing and legacy applications.",
     "My background includes Python and ERPNext/Frappe business workflow customization, followed by backend and full stack work at PawnHero using Elixir/Phoenix, Node.js, React, and MySQL. I work on customer-facing applications and internal systems, including maintenance and production troubleshooting.",
